@@ -4,7 +4,7 @@ from airflow.operators.bash import BashOperator
 from airflow.models.dag import DAG
 
 with DAG(
-    dag_id="dags_bash_operator",
+    dag_id="dags_bash_select_fruit",
     schedule="10 0 * * 6#1",
     start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
     catchup=False,
