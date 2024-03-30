@@ -4,7 +4,7 @@ from airflow.operators.bash import BashOperator
 from airflow.models.dag import DAG
 
 with DAG(
-    dag_id="dags_bash_with_macro",
+    dag_id="dags_bash_with_macro_eg2",
     schedule="10 0 * * 6#2", # 매월 둘째주 토요일
     start_date=pendulum.datetime(2024, 3, 1, tz="Asia/Seoul"),
     catchup=False,
