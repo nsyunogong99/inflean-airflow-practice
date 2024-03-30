@@ -1,4 +1,4 @@
-import datetime
+import pendulum
 from airflow.models.dag import DAG
 from airflow.operators.bash import BashOperator
 from airflow.exceptions import AirflowException
@@ -7,7 +7,7 @@ from airflow.decorators import task
 with DAG(
     dag_id="dags_python_with_branch_decorator",
     schedule=None,
-    start_date=datetime(2024,3,31, tz='Asia/Seoul'),
+    start_date=pendulum.datetime(2024,3,31, tz='Asia/Seoul'),
     catchup=False,
 ) as dag:
     
