@@ -5,9 +5,9 @@ from airflow.decorators import task
 
 with DAG(
     dag_id="dags_simple_http_operator",
-    schedule="30 6 * * *",
     start_date=pendulum.datetime(2024, 3, 1, tz="Asia/Seoul"),
-    catchup=None,
+    catchup=False,
+    schedule=None,
 ) as dag:
     
     '''서울시 공공자전거 대여소 정보'''
